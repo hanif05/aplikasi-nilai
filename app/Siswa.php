@@ -34,8 +34,8 @@ class Siswa extends Model
 
 	public function rata2nilai()
 	{
-		$total = 1;
-		$hitung = 1;
+		$total = 0;
+		$hitung = 0;
 		
 		
 			foreach ($this->matkul as $matkul) {

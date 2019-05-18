@@ -37,6 +37,7 @@
                             </div>   
 						</div>
 					</div>
+                    @if(auth()->user()->level == 'admin')
                     <div class="col-md-3">
                         <div class="metric">
                             <span class="icon"><i class="lnr lnr-user"></i></span>
@@ -55,7 +56,7 @@
                                 </p>
                         </div>
                     </div>
-
+                    @endif
 
                     
                                 

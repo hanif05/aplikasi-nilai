@@ -10,8 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// route frontend
+Route::get('/', 'FrontendController@index');
+Route::get('/daftar', 'FrontendController@daftar');
+Route::post('/register', 'FrontendController@register');
+
 //route login
-Route::get('/', 'AuthController@index')->name('login');
+Route::get('/login', 'AuthController@index')->name('login');
 Route::post('/proseslogin', 'AuthController@validasi');
 Route::get('/logout', 'AuthController@logout');
 

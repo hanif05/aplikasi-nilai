@@ -19,7 +19,7 @@ class AuthController extends Controller
 
     	}
 
-    	return redirect('/');
+    	return redirect('/login');
 
     }
 
@@ -27,7 +27,7 @@ class AuthController extends Controller
 
     	Auth::logout();
     	
-    	return redirect('/');
+    	return redirect('/login');
 
 
 

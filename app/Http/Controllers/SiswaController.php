@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Exports\SiswaExport;
 use Maatwebsite\Excel\Facades\Excel;
+use App\User;
+use App\Siswa;
 
 class SiswaController extends Controller
 {
@@ -14,7 +16,8 @@ class SiswaController extends Controller
 			$data_siswa = \App\Siswa::where('nama_depan', 'LIKE', '%'.$request->cari.'%')->get();
 		}
 		else {
-			$data_siswa = \App\Siswa::all();			
+			$data_siswa = Siswa::all();
+						
 		}
     	return view('siswa/listsiswa', ['data_siswa' => $data_siswa]);
 
